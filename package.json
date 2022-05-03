@@ -1,12 +1,12 @@
 {
-  "name": "react-electron",
-  "version": "0.1.0",
-  "description": "Simple boilerplate for developing an Electron app with React",
-  "author": "willjw3",
+  "name": "word-search",
+  "version": "1.0.0",
+  "description": "Word search app for Allied World",
+  "author": "ImmersiveAV",
   "build": {
-    "appId": "react.electron",
-    "productName": "react-electron",
-    "mac":{
+    "appId": "word.search",
+    "productName": "word-search",
+    "mac": {
       "icon": "build/logo512.png",
       "target": "tar.gz"
     },
@@ -64,7 +64,7 @@
   },
   "devDependencies": {
     "concurrently": "^5.0.0",
-    "electron": "^7.1.0",
+    "electron": "^7.3.3",
     "electron-builder": "^22.1.0",
     "wait-on": "^3.3.0"
   }
