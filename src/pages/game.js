@@ -1,7 +1,13 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import logo from '../img/logo.svg';
 import '../styles/globals.css';
 import '../styles/game.css';
+
+// const electron = window.require('electron');
+// const Store = window.require('electron-store');
+
+// import Store from 'electron-store';
 
 const Game = () => {
   // return (
@@ -13,14 +19,32 @@ const Game = () => {
   // );
   useEffect(() => {
     handleGameLogic();
-    // localStorage.setItem('lastname', 'Smith');
-    // console.log(localStorage.getItem('lastname'));
+    console.log('build 2');
+
+    // const one = {
+    //   name: 'Cameron Green',
+    //   email: 'c.c.green@outlook.com',
+    //   time: 57,
+    // };
+    // const two = {
+    //   name: 'Calum Smail',
+    //   email: 'calum.smail@voxelstudio.co.uk',
+    //   time: 42,
+    // };
+    // localStorage.setItem('one', JSON.stringify(one));
+    // localStorage.setItem('two', JSON.stringify(two));
+    // console.log()
+    // let arr = [];
+    // Object.keys(localStorage).map((k) => arr.push(localStorage.getItem(k)));
+    // console.log(arr);
+    // const retrievedObject = localStorage.getItem('obj');
+    // console.log('retrievedObject: ', JSON.parse(retrievedObject));
   }, []);
   return (
     <div className='wrapper game no-select'>
       <header className='header'>
         <h1 className='tagline'>PROBLEMS...SOLVED</h1>
-        <img src='/img/logo.svg' />
+        <img src={logo} />
       </header>
       <ul className='soup'>
         <li className='letter'>Y</li>
@@ -362,16 +386,9 @@ const Game = () => {
         <li className='letter'>P</li>
         <li className='letter'>Q</li>
       </ul>
-      {/* <ul className='words no-select'>
-        <li className='word'>frog</li>
-        <li className='word'>bear</li>
-        <li className='word'>panda</li>
-        <li className='word'>lion</li>
-        <li className='word'>bat</li>
-      </ul> */}
-      <Link to='/' style={{ position: 'fixed', bottom: 0, right: 0 }}>
+      {/* <Link to='/' style={{ position: 'fixed', bottom: 0, right: 0 }}>
         Link to Home
-      </Link>
+      </Link> */}
     </div>
   );
 };

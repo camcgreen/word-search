@@ -1,8 +1,8 @@
 {
   "name": "word-search",
   "version": "1.0.0",
-  "description": "Word search app for Allied World",
-  "author": "ImmersiveAV",
+  "description": "Word search app",
+  "author": "Allied World",
   "build": {
     "appId": "word.search",
     "productName": "word-search",
@@ -33,6 +33,7 @@
   "dependencies": {
     "cross-env": "^6.0.3",
     "electron-is-dev": "^1.1.0",
+    "electron-store": "^8.0.1",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-router-dom": "^5.1.2",

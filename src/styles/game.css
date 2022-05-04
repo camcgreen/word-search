@@ -20,7 +20,7 @@
 
 .header {
   font-family: "Outfit";
-  width: calc(830px - 40px);
+  width: calc(1150px - 40px);
   /* margin-top: 40px; */
   padding: 20px;
   background: #B31B34;
@@ -40,10 +40,6 @@
 .header img {
   /* width: 300px; */
   height: 75px;
-}
-
-.failed {
-	background-color: #c83b3b;
 }
 
 .words {
@@ -73,9 +69,23 @@
 	color: black;
 	list-style: none;
 	display: grid;
-	grid-template-columns: repeat(16, 50px);
-	grid-template-rows: repeat(9, 50px);
+	grid-template-columns: repeat(16, 70px);
+	grid-template-rows: repeat(9, 70px);
 	grid-gap: 2px;
+}
+
+@media (max-width: 1350px) {
+  .header {
+    width: calc(830px - 40px);
+  }
+  .soup {
+    grid-template-columns: repeat(16, 50px);
+	  grid-template-rows: repeat(9, 50px);
+  }
+}
+
+.failed {
+	background-color: #B31B34;
 }
 
 .letter {
