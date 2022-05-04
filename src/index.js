@@ -10,14 +10,11 @@ import Leaderboard from './pages/leaderboard';
 
 ReactDOM.render(
   <Router>
-    <div>
-      <main>
-        {/* <Route exact path='/' component={Home} /> */}
-        <Route path='/' exact component={Form} />
-        <Route path='/game' exact component={Game} />
-        <Route path='/leaderboard' exact component={Leaderboard} />
-      </main>
-    </div>
+    <>
+      <Route path='/' exact component={Form} />
+      <Route path='/game' exact component={Game} />
+      <Route path='/leaderboard' exact component={Leaderboard} />
+    </>
   </Router>,
   document.getElementById('root')
 );

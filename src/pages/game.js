@@ -13,93 +13,362 @@ const Game = () => {
   // );
   useEffect(() => {
     handleGameLogic();
+    // localStorage.setItem('lastname', 'Smith');
+    // console.log(localStorage.getItem('lastname'));
   }, []);
   return (
-    <div className='wrapper game'>
-      <ul className='soup no-select'>
-        <li className='letter' data-active='active' data-word='frog'>
-          f
+    <div className='wrapper game no-select'>
+      <header className='header'>
+        <h1 className='tagline'>PROBLEMS...SOLVED</h1>
+        <img src='/img/logo.svg' />
+      </header>
+      <ul className='soup'>
+        <li className='letter'>Y</li>
+        <li className='letter'>S</li>
+        <li className='letter'>R</li>
+        <li className='letter'>S</li>
+        <li className='letter'>B</li>
+        <li className='letter'>E</li>
+        <li className='letter' data-word='claimspaid'>
+          C
         </li>
-        <li className='letter' data-active='active' data-word='bear'>
-          b
+        <li className='letter' data-word='claimspaid'>
+          L
         </li>
-        <li className='letter' data-active='active' data-word=''>
-          s
+        <li className='letter' data-word='claimspaid'>
+          A
         </li>
-        <li className='letter' data-active='active' data-word=''>
-          r
+        <li className='letter' data-word='claimspaid'>
+          I
         </li>
-        <li className='letter' data-active='active' data-word='panda'>
-          p
+        <li className='letter' data-word='claimspaid'>
+          M
         </li>
-        <li className='letter' data-active='active' data-word='frog'>
-          r
+        <li className='letter' data-word='claimspaid'>
+          S
         </li>
-        <li className='letter' data-active='active' data-word=''>
-          l
+        <li className='letter' data-word='claimspaid'>
+          P
         </li>
-        <li className='letter' data-active='active' data-word='bear'>
-          e
+        <li className='letter' data-word='claimspaid'>
+          A
         </li>
-        <li className='letter' data-active='active' data-word='panda'>
-          a
+        <li className='letter' data-word='claimspaid'>
+          I
         </li>
-        <li className='letter' data-active='active' data-word='bat'>
-          t
+        <li className='letter' data-word='claimspaid'>
+          D
         </li>
-        <li className='letter' data-active='active' data-word='frog'>
-          o
+        <li className='letter'>M</li>
+        <li className='letter'>H</li>
+        <li className='letter'>G</li>
+        <li className='letter' data-word='consistent'>
+          T
         </li>
-        <li className='letter' data-active='active' data-word=''>
-          l
+        <li className='letter' data-word='consistent'>
+          N
         </li>
-        <li className='letter' data-active='active' data-word='panda'>
-          n
+        <li className='letter' data-word='consistent'>
+          E
         </li>
-        <li className='letter' data-active='active' data-word='bear bat'>
-          a
+        <li className='letter' data-word='consistent'>
+          T
         </li>
-        <li className='letter' data-active='active' data-word=''>
-          z
+        <li className='letter' data-word='consistent'>
+          S
         </li>
-        <li className='letter' data-active='active' data-word='frog'>
-          g
+        <li className='letter' data-word='consistent'>
+          I
         </li>
-        <li className='letter' data-active='active' data-word='panda'>
-          d
+        <li className='letter' data-word='consistent'>
+          S
         </li>
-        <li className='letter' data-active='active' data-word='bat'>
-          b
+        <li className='letter' data-word='consistent'>
+          N
         </li>
-        <li className='letter' data-active='active' data-word=''>
-          x
+        <li className='letter' data-word='consistent'>
+          O
         </li>
-        <li className='letter' data-active='active' data-word='bear'>
-          r
+        <li className='letter' data-word='consistent'>
+          C
         </li>
-        <li className='letter' data-active='active' data-word='panda'>
-          a
+        <li className='letter'>D</li>
+        <li className='letter'>C</li>
+        <li className='letter'>H</li>
+        <li className='letter'>B</li>
+        <li className='letter'>V</li>
+        <li className='letter'>P</li>
+        <li className='letter' data-word='tailored'>
+          D
         </li>
-        <li className='letter' data-active='active' data-word='lion'>
-          l
+        <li className='letter' data-word='tailored'>
+          E
         </li>
-        <li className='letter' data-active='active' data-word='lion'>
-          i
+        <li className='letter' data-word='tailored'>
+          R
         </li>
-        <li className='letter' data-active='active' data-word='lion'>
-          o
+        <li className='letter' data-word='tailored'>
+          O
         </li>
-        <li className='letter' data-active='active' data-word='lion'>
-          n
+        <li className='letter' data-word='tailored'>
+          L
         </li>
+        <li className='letter' data-word='tailored'>
+          I
+        </li>
+        <li className='letter' data-word='tailored'>
+          A
+        </li>
+        <li className='letter' data-word='tailored'>
+          T
+        </li>
+        <li className='letter'>O</li>
+        <li className='letter'>Z</li>
+        <li className='letter'>H</li>
+        <li className='letter'>F</li>
+        <li className='letter'>O</li>
+        <li className='letter'>U</li>
+        <li className='letter'>W</li>
+        <li className='letter'>X</li>
+        <li className='letter'>Q</li>
+        <li className='letter' data-word='expertise'>
+          E
+        </li>
+        <li className='letter' data-word='expertise'>
+          X
+        </li>
+        <li className='letter' data-word='expertise'>
+          P
+        </li>
+        <li className='letter' data-word='expertise'>
+          E
+        </li>
+        <li className='letter' data-word='expertise'>
+          R
+        </li>
+        <li className='letter' data-word='expertise'>
+          T
+        </li>
+        <li className='letter' data-word='expertise'>
+          I
+        </li>
+        <li className='letter' data-word='expertise'>
+          S
+        </li>
+        <li className='letter' data-word='expertise'>
+          E
+        </li>
+        <li className='letter'>O</li>
+        <li className='letter'>I</li>
+        <li className='letter'>T</li>
+        <li className='letter' data-word='riskmanagement'>
+          T
+        </li>
+        <li className='letter' data-word='riskmanagement'>
+          N
+        </li>
+        <li className='letter' data-word='riskmanagement'>
+          E
+        </li>
+        <li className='letter' data-word='riskmanagement'>
+          M
+        </li>
+        <li className='letter' data-word='riskmanagement'>
+          E
+        </li>
+        <li className='letter' data-word='riskmanagement'>
+          G
+        </li>
+        <li className='letter' data-word='riskmanagement'>
+          A
+        </li>
+        <li className='letter' data-word='riskmanagement'>
+          N
+        </li>
+        <li className='letter' data-word='riskmanagement'>
+          A
+        </li>
+        <li className='letter' data-word='riskmanagement'>
+          M
+        </li>
+        <li className='letter' data-word='riskmanagement'>
+          K
+        </li>
+        <li className='letter' data-word='riskmanagement'>
+          S
+        </li>
+        <li className='letter' data-word='riskmanagement'>
+          I
+        </li>
+        <li className='letter' data-word='riskmanagement'>
+          R
+        </li>
+        <li className='letter'>N</li>
+        <li className='letter'>K</li>
+        <li className='letter' data-word='underwriting'>
+          U
+        </li>
+        <li className='letter' data-word='underwriting'>
+          N
+        </li>
+        <li className='letter' data-word='underwriting'>
+          D
+        </li>
+        <li className='letter' data-word='underwriting'>
+          E
+        </li>
+        <li className='letter' data-word='underwriting'>
+          R
+        </li>
+        <li className='letter' data-word='underwriting'>
+          W
+        </li>
+        <li className='letter' data-word='underwriting'>
+          R
+        </li>
+        <li className='letter' data-word='underwriting'>
+          I
+        </li>
+        <li className='letter' data-word='underwriting'>
+          T
+        </li>
+        <li className='letter' data-word='underwriting'>
+          I
+        </li>
+        <li className='letter' data-word='underwriting'>
+          N
+        </li>
+        <li className='letter' data-word='underwriting'>
+          G
+        </li>
+        <li className='letter'>X</li>
+        <li className='letter'>Y</li>
+        <li className='letter'>X</li>
+        <li className='letter'>P</li>
+        <li className='letter'>D</li>
+        <li className='letter'>S</li>
+        <li className='letter' data-word='insurance'>
+          I
+        </li>
+        <li className='letter' data-word='insurance'>
+          N
+        </li>
+        <li className='letter' data-word='insurance'>
+          S
+        </li>
+        <li className='letter' data-word='insurance'>
+          U
+        </li>
+        <li className='letter' data-word='insurance'>
+          R
+        </li>
+        <li className='letter' data-word='insurance'>
+          A
+        </li>
+        <li className='letter' data-word='insurance'>
+          N
+        </li>
+        <li className='letter' data-word='insurance'>
+          C
+        </li>
+        <li className='letter' data-word='insurance'>
+          E
+        </li>
+        <li className='letter'>T</li>
+        <li className='letter'>R</li>
+        <li className='letter'>P</li>
+        <li className='letter'>U</li>
+        <li className='letter'>H</li>
+        <li className='letter'>R</li>
+        <li className='letter'>N</li>
+        <li className='letter' data-word='service'>
+          E
+        </li>
+        <li className='letter' data-word='service'>
+          C
+        </li>
+        <li className='letter' data-word='service'>
+          I
+        </li>
+        <li className='letter' data-word='service'>
+          V
+        </li>
+        <li className='letter' data-word='service responsive'>
+          R
+        </li>
+        <li className='letter' data-word='service responsive'>
+          E
+        </li>
+        <li className='letter' data-word='service responsive'>
+          S
+        </li>
+        <li className='letter' data-word='responsive'>
+          P
+        </li>
+        <li className='letter' data-word='responsive'>
+          O
+        </li>
+        <li className='letter' data-word='responsive'>
+          N
+        </li>
+        <li className='letter' data-word='responsive'>
+          S
+        </li>
+        <li className='letter' data-word='responsive'>
+          I
+        </li>
+        <li className='letter' data-word='responsive'>
+          V
+        </li>
+        <li className='letter' data-word='responsive'>
+          E
+        </li>
+        <li className='letter' data-word='disciplined'>
+          D
+        </li>
+        <li className='letter' data-word='disciplined'>
+          I
+        </li>
+        <li className='letter' data-word='disciplined'>
+          S
+        </li>
+        <li className='letter' data-word='disciplined'>
+          C
+        </li>
+        <li className='letter' data-word='disciplined'>
+          I
+        </li>
+        <li className='letter' data-word='disciplined'>
+          P
+        </li>
+        <li className='letter' data-word='disciplined'>
+          L
+        </li>
+        <li className='letter' data-word='disciplined'>
+          I
+        </li>
+        <li className='letter' data-word='disciplined'>
+          N
+        </li>
+        <li className='letter' data-word='disciplined'>
+          E
+        </li>
+        <li className='letter' data-word='disciplined'>
+          D
+        </li>
+        <li className='letter'>Z</li>
+        <li className='letter'>I</li>
+        <li className='letter'>S</li>
+        <li className='letter'>P</li>
+        <li className='letter'>Q</li>
       </ul>
-      <ul className='words no-select'>
+      {/* <ul className='words no-select'>
         <li className='word'>frog</li>
         <li className='word'>bear</li>
         <li className='word'>panda</li>
         <li className='word'>lion</li>
         <li className='word'>bat</li>
-      </ul>
+      </ul> */}
       <Link to='/' style={{ position: 'fixed', bottom: 0, right: 0 }}>
         Link to Home
       </Link>
@@ -110,47 +379,119 @@ const Game = () => {
 const handleGameLogic = () => {
   const nodelist = document.querySelectorAll('.letter');
   const letters = Array.apply(null, nodelist);
-  const plainWords = document.querySelectorAll('.word');
-
-  const scoreToWin = plainWords.length;
-  let score = 0;
 
   let time = 0;
   const tick = setInterval(() => time++, 1000);
-  // setInterval(tick, 1000);
 
-  // const tick = () => {
-  //   time++;
-  // }
+  const claimsPaid = letters.filter((letter) => {
+    const dataWords = letter.dataset['word'];
+    if (dataWords) {
+      const split = dataWords.split(' ');
+      return split.some((word) => word === 'claimspaid');
+    }
+  });
 
-  const frog = letters.filter((letter) => {
-    const dataWords = letter.dataset['word'].split(' ');
-    return dataWords.some((word) => word === 'frog');
+  const consistent = letters.filter((letter) => {
+    const dataWords = letter.dataset['word'];
+    if (dataWords) {
+      const split = dataWords.split(' ');
+      return split.some((word) => word === 'consistent');
+    }
   });
-  const bear = letters.filter((letter) => {
-    const dataWords = letter.dataset['word'].split(' ');
-    return dataWords.some((word) => word === 'bear');
+
+  const tailored = letters.filter((letter) => {
+    const dataWords = letter.dataset['word'];
+    if (dataWords) {
+      const split = dataWords.split(' ');
+      return split.some((word) => word === 'tailored');
+    }
   });
-  const panda = letters.filter((letter) => {
-    const dataWords = letter.dataset['word'].split(' ');
-    return dataWords.some((word) => word === 'panda');
+
+  const expertise = letters.filter((letter) => {
+    const dataWords = letter.dataset['word'];
+    if (dataWords) {
+      const split = dataWords.split(' ');
+      return split.some((word) => word === 'expertise');
+    }
   });
-  const lion = letters.filter((letter) => {
-    const dataWords = letter.dataset['word'].split(' ');
-    return dataWords.some((word) => word === 'lion');
+
+  const riskManagement = letters.filter((letter) => {
+    const dataWords = letter.dataset['word'];
+    if (dataWords) {
+      const split = dataWords.split(' ');
+      return split.some((word) => word === 'riskmanagement');
+    }
   });
-  const bat = letters.filter((letter) => {
-    const dataWords = letter.dataset['word'].split(' ');
-    return dataWords.some((word) => word === 'bat');
+
+  const underwriting = letters.filter((letter) => {
+    const dataWords = letter.dataset['word'];
+    if (dataWords) {
+      const split = dataWords.split(' ');
+      return split.some((word) => word === 'underwriting');
+    }
   });
-  const solutionWords = [frog, bear, panda, lion, bat];
-  const solution = [
-    [frog[0], frog[frog.length - 1]],
-    [bear[0], bear[bear.length - 1]],
-    [panda[0], panda[panda.length - 1]],
-    [lion[0], lion[lion.length - 1]],
-    [bat[0], bat[bat.length - 1]],
+
+  const insurance = letters.filter((letter) => {
+    const dataWords = letter.dataset['word'];
+    if (dataWords) {
+      const split = dataWords.split(' ');
+      return split.some((word) => word === 'insurance');
+    }
+  });
+
+  const service = letters.filter((letter) => {
+    const dataWords = letter.dataset['word'];
+    if (dataWords) {
+      const split = dataWords.split(' ');
+      return split.some((word) => word === 'service');
+    }
+  });
+
+  const responsive = letters.filter((letter) => {
+    const dataWords = letter.dataset['word'];
+    if (dataWords) {
+      const split = dataWords.split(' ');
+      return split.some((word) => word === 'responsive');
+    }
+  });
+
+  const disciplined = letters.filter((letter) => {
+    const dataWords = letter.dataset['word'];
+    if (dataWords) {
+      const split = dataWords.split(' ');
+      return split.some((word) => word === 'disciplined');
+    }
+  });
+
+  const solutionWords = [
+    claimsPaid,
+    consistent,
+    tailored,
+    expertise,
+    riskManagement,
+    underwriting,
+    insurance,
+    service,
+    responsive,
+    disciplined,
   ];
+  // let solution = [];
+  // solution.push(solutionWords.map((sltn) => [sltn[0], sltn[sltn.length - 1]]));
+  const solution = [
+    [claimsPaid[0], claimsPaid[claimsPaid.length - 1]],
+    [consistent[0], consistent[consistent.length - 1]],
+    [tailored[0], tailored[tailored.length - 1]],
+    [expertise[0], expertise[expertise.length - 1]],
+    [riskManagement[0], riskManagement[riskManagement.length - 1]],
+    [underwriting[0], underwriting[underwriting.length - 1]],
+    [insurance[0], insurance[insurance.length - 1]],
+    [service[0], service[service.length - 1]],
+    [responsive[0], responsive[responsive.length - 1]],
+    [disciplined[0], disciplined[disciplined.length - 1]],
+  ];
+
+  const scoreToWin = solutionWords.length;
+  let score = 0;
 
   let selected = [];
   let solutionSolved = null;
@@ -183,7 +524,7 @@ const handleGameLogic = () => {
       ) {
         solutionSolved = i;
         score++;
-        score >= scoreToWin && setTimeout(handleVictory, 500);
+        score >= scoreToWin && setTimeout(handleVictory, 200);
         return true;
       }
     }
@@ -200,14 +541,22 @@ const handleGameLogic = () => {
   };
 
   const handleCorrect = () => {
-    const colours = ['#ecdac8', '#ECC8E1', '#D3DCEE', '#C8ECE7', '#F1F0DA'];
+    const colours = [
+      '#A0235D',
+      '#7D3976',
+      '#53467B',
+      '#344A6E',
+      '#2F4858',
+      '#A0235D',
+      '#7D3976',
+      '#53467B',
+      '#344A6E',
+      '#2F4858',
+    ];
     solutionWords[solutionSolved].forEach((letter) => {
       letter.style.backgroundColor = colours[solutionSolved];
-      letter.style.color = 'black';
+      letter.style.color = 'white';
     });
-    plainWords[solutionSolved].style.backgroundColor = colours[solutionSolved];
-    plainWords[solutionSolved].style.color = 'black';
-    plainWords[solutionSolved].style.textDecoration = 'line-through';
     clearSelected();
     solutionSolved = null;
   };

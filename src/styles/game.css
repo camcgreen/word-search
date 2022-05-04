@@ -1,30 +1,45 @@
 @keyframes flicker {
 	0% {
-		border-color: rgba(255, 255, 255, 1);
+		border-color: rgba(0, 0, 0, 1);
 	}
 	50% {
-		border-color: rgba(255, 255, 255, 0.25);
+		border-color: rgba(0, 0, 0, 0.25);
 	}
 	100% {
-		border-color: rgba(255, 255, 255, 1);
+		border-color: rgba(0, 0, 0, 1);
 	}
 }
 
 .game {
   display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	transition: background-color 0.2s ease-out;
 }
 
-.no-select {
-  -webkit-touch-callout: none;
-	-webkit-user-select: none;
-	-khtml-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
+.header {
+  font-family: "Outfit";
+  width: calc(830px - 40px);
+  /* margin-top: 40px; */
+  padding: 20px;
+  background: #B31B34;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.header h1 {
+  color: white;
+  font-size: 2.25rem;
+}
+
+.header img {
+  /* width: 300px; */
+  height: 75px;
 }
 
 .failed {
@@ -33,13 +48,12 @@
 
 .words {
 	list-style: none;
-	color: white;
 	font-size: 1.5rem;
 	margin-left: 100px;
 }
 
 .word {
-	background: #6c82f8;
+	background: white;
 	padding: 10px 20px;
 	border-radius: 10px;
 	margin-bottom: 20px;
@@ -55,34 +69,35 @@
 }
 
 .soup {
-	color: white;
+  margin-top: 40px;
+	color: black;
 	list-style: none;
 	display: grid;
-	grid-template-columns: repeat(5, 80px);
-	grid-template-rows: repeat(5, 80px);
-	grid-gap: 20px;
+	grid-template-columns: repeat(16, 50px);
+	grid-template-rows: repeat(9, 50px);
+	grid-gap: 2px;
 }
 
 .letter {
 	cursor: pointer;
-	border: solid rgba(255, 255, 255, 0) 1px;
+	border: solid rgba(0, 0, 0, 0) 1px;
 	border-radius: 10px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	text-align: center;
-	font-size: 2rem;
+	font-size: 1.5rem;
 	transition: border-color 0.2s ease-in-out, transform 0.2s ease-in-out,
 		background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
 .letter:hover {
-	border-color: rgba(255, 255, 255, 1);
+	border-color: rgba(0, 0, 0, 1);
 	transform: scale(1.1);
 }
 
 .selected {
-	border-color: rgba(255, 255, 255, 1);
+	border-color: rgba(0, 0, 0, 1);
 	animation-name: flicker;
 	animation-duration: 0.8s;
 	animation-iteration-count: infinite;
