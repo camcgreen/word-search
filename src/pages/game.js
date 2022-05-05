@@ -4,44 +4,15 @@ import logo from '../img/logo.svg';
 import '../styles/globals.css';
 import '../styles/game.css';
 
-// const electron = window.require('electron');
-// const Store = window.require('electron-store');
-
-// import Store from 'electron-store';
-
-const Game = () => {
-  // return (
-  //   <div classNameName='game'>
-  //     <p>Welcome to Game</p>
-  //     <Link to='/'>Link to Home</Link>
-  //     <Link to='/leaderboard'>Link to Leaderboard</Link>
-  //   </div>
-  // );
+const Game = ({ history }) => {
   useEffect(() => {
-    handleGameLogic();
-    console.log('build 2');
-
-    // const one = {
-    //   name: 'Cameron Green',
-    //   email: 'c.c.green@outlook.com',
-    //   time: 57,
-    // };
-    // const two = {
-    //   name: 'Calum Smail',
-    //   email: 'calum.smail@voxelstudio.co.uk',
-    //   time: 42,
-    // };
-    // localStorage.setItem('one', JSON.stringify(one));
-    // localStorage.setItem('two', JSON.stringify(two));
-    // console.log()
-    // let arr = [];
-    // Object.keys(localStorage).map((k) => arr.push(localStorage.getItem(k)));
-    // console.log(arr);
-    // const retrievedObject = localStorage.getItem('obj');
-    // console.log('retrievedObject: ', JSON.parse(retrievedObject));
+    handleGameLogic(history);
   }, []);
   return (
     <div className='wrapper game no-select'>
+      <Link to='/' style={{ position: 'fixed', bottom: 0, right: 0 }}>
+        Link to Home
+      </Link>
       <header className='header'>
         <h1 className='tagline'>PROBLEMS...SOLVED</h1>
         <img src={logo} />
@@ -386,14 +357,11 @@ const Game = () => {
         <li className='letter'>P</li>
         <li className='letter'>Q</li>
       </ul>
-      {/* <Link to='/' style={{ position: 'fixed', bottom: 0, right: 0 }}>
-        Link to Home
-      </Link> */}
     </div>
   );
 };
 
-const handleGameLogic = () => {
+const handleGameLogic = (history) => {
   const nodelist = document.querySelectorAll('.letter');
   const letters = Array.apply(null, nodelist);
 
@@ -551,11 +519,45 @@ const handleGameLogic = () => {
 
   const handleVictory = () => {
     // popup here with button to take you to leaderboard -> wrap with Link component and send contact info + time as props
+    // const convertedTime = convertTime(time);
+    // alert(`Completed in ${convertedTime}`);
+    localStorage.setItem('id', Math.random());
     clearInterval(tick);
-    const convertedTime = convertTime(time);
-    alert(`Completed in ${convertedTime}`);
+    const currentName = localStorage.getItem('currentName');
+    const currentEmail = localStorage.getItem('currentEmail');
+    const names = localStorage.getItem('names');
+    if (names) {
+      let arr = JSON.parse(names);
+      arr.push(currentName);
+      localStorage.setItem('names', JSON.stringify(arr));
+    } else {
+      let arr = [currentName];
+      localStorage.setItem('names', JSON.stringify(arr));
+    }
+    const emails = localStorage.getItem('emails');
+    if (emails) {
+      let arr = JSON.parse(emails);
+      arr.push(currentEmail);
+      localStorage.setItem('emails', JSON.stringify(arr));
+    } else {
+      let arr = [currentEmail];
+      localStorage.setItem('emails', JSON.stringify(arr));
+    }
+    const times = localStorage.getItem('times');
+    if (times) {
+      let arr = JSON.parse(times);
+      arr.push(time);
+      localStorage.setItem('times', JSON.stringify(arr));
+    } else {
+      let arr = [time];
+      localStorage.setItem('times', JSON.stringify(arr));
+    }
+    history.push('/leaderboard');
+    // if (!localStorage.getItem)
     // resetGame();
   };
+
+  // handleVictory();
 
   const handleCorrect = () => {
     const colours = [
@@ -604,16 +606,6 @@ const handleGameLogic = () => {
   letters.forEach((letter) => {
     letter.addEventListener('click', handleClick);
   });
-};
-
-const convertTime = (seconds) => {
-  let sec = seconds % 60;
-  let min = parseInt(seconds / 60);
-  if (sec.toString().length == 1) {
-    // padding
-    sec = '0' + sec;
-  }
-  return min + ':' + sec;
 };
 
 export default Game;
