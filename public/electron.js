@@ -11,6 +11,7 @@ function createWindow() {
     minWidth: 950,
     minHeight: 700,
     icon: '',
+    autoHideMenuBar: true,
   });
 
   mainWindow.loadURL(

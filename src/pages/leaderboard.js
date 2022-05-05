@@ -13,14 +13,16 @@ const Leaderboard = ({ history }) => {
     const storedNames = JSON.parse(localStorage.getItem('names'));
     const storedTimes = JSON.parse(localStorage.getItem('times'));
     let leaderboardArr = [];
-    for (let i = 0; i < storedNames.length; i++) {
-      leaderboardArr.push({
-        name: storedNames[i],
-        time: storedTimes[i],
-      });
+    if (storedNames) {
+      for (let i = 0; i < storedNames.length; i++) {
+        leaderboardArr.push({
+          name: storedNames[i],
+          time: storedTimes[i],
+        });
+      }
+      leaderboardArr.sort(({ time: a }, { time: b }) => a - b);
+      setLeaderboardArr(leaderboardArr);
     }
-    leaderboardArr.sort(({ time: a }, { time: b }) => a - b);
-    setLeaderboardArr(leaderboardArr);
   }, []);
 
   return (
