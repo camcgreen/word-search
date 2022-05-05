@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import Header from '../components/header';
+import Fullscreen from '../components/fullscreen';
 import { Link } from 'react-router-dom';
 import '../styles/globals.css';
 import '../styles/form.css';
@@ -7,7 +9,6 @@ const Form = ({ history }) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const handleSubmit = (e) => {
-    // alert(`name = ${name}, email = ${email}`);
     localStorage.setItem('currentName', name);
     localStorage.setItem('currentEmail', email);
     history.push('/game');
@@ -19,30 +20,35 @@ const Form = ({ history }) => {
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
   };
-  // useEffect(() => {}, []);
   return (
-    <div className='form'>
-      <form onSubmit={handleSubmit}>
-        <label>
-          Name:
-          <input type='text' value={name} onChange={handleNameChange} />
-        </label>
-        <label>
-          Email:
-          <input type='text' value={email} onChange={handleEmailChange} />
-        </label>
-        <input type='submit' value='Submit' />
-      </form>
-      {/* <Link to='/game'>Link to Game</Link> */}
-      <Link
-        to={{
-          pathname: '/game',
-          name: name,
-          email: email,
-        }}
-      >
-        Link to game
-      </Link>
+    <div className='wrapper'>
+      <div className='form'>
+        <Header />
+        <form onSubmit={handleSubmit}>
+          <input
+            type='text'
+            placeholder='name'
+            value={name}
+            onChange={handleNameChange}
+            required
+          />
+          <input
+            type='email'
+            placeholder='email'
+            value={email}
+            onChange={handleEmailChange}
+            required
+          />
+          <input className='submit' type='submit' value='Submit' />
+          <button
+            className='leaderboard-btn'
+            onClick={() => history.push('/leaderboard')}
+          >
+            Leaderboard
+          </button>
+        </form>
+      </div>
+      <Fullscreen />
     </div>
   );
 };

@@ -6,22 +6,38 @@
   padding: 0;
 }
 
+::placeholder {
+  opacity: 1;
+  font-size: 1.25rem;
+  /* color: black; */
+}
+
 a {
   /* color: inherit; */
   /* text-decoration: none; */
   box-sizing: border-box;
 }
 
+html {
+  --colRed: #B31B34;
+}
+
 body {
 	/* font-family: "Outfit"; */
-  font-family: 'PT Serif', serif;
-	font-weight: 300;
+  /* font-family: 'PT Serif', serif; */
+	/* font-weight: 300; */
 }
 
 .wrapper {
 	width: 100%;
 	height: 100vh;
 	background-color: white;
+  display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+  font-family: 'Outfit', Arial;
+  font-weight: 300;
 }
 
 .no-select {

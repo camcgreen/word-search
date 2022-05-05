@@ -1,0 +1,32 @@
+
+.header {
+  font-family: "Outfit";
+  /* width: calc(1150px - 40px); */
+  /* width: 1150px; */
+  width: calc(100% - 40px);
+  /* margin-top: 40px; */
+  padding: 20px;
+  background: var(--colRed);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.header h1 {
+  color: white;
+  font-size: 2.25rem;
+}
+
+.header img {
+  /* width: 300px; */
+  height: 75px;
+}
+
+@media (max-width: 1350px) {
+  .header {
+    max-width: calc(830px - 40px);
+  }
+}
