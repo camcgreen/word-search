@@ -38,6 +38,7 @@ body {
 	align-items: center;
   font-family: 'Outfit', Arial;
   font-weight: 300;
+  transition: background-color 0.2s ease-in-out;
 }
 
 .no-select {
