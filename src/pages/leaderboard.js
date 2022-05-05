@@ -2,20 +2,12 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../components/header';
 import Fullscreen from '../components/fullscreen';
+import { convertTime } from '../utils/helpers';
 import '../styles/globals.css';
 import '../styles/leaderboard.css';
 
 const Leaderboard = ({ history }) => {
   const [leaderboardArr, setLeaderboardArr] = useState([]);
-
-  const convertTime = (seconds) => {
-    let sec = seconds % 60;
-    let min = parseInt(seconds / 60);
-    if (sec.toString().length == 1) {
-      sec = '0' + sec;
-    }
-    return min + ':' + sec;
-  };
 
   useEffect(() => {
     const storedNames = JSON.parse(localStorage.getItem('names'));
