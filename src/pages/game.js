@@ -383,7 +383,7 @@ const Game = ({ history }) => {
           </ul>
           <ul className='words'>
             <h2>Find these words</h2>
-            <li className='word'>CLAIMS PAID</li>
+            {/* <li className='word'>CLAIMS PAID</li>
             <li className='word'>CONSISTENT</li>
             <li className='word'>TAILORED</li>
             <li className='word'>EXPERTISE</li>
@@ -392,7 +392,17 @@ const Game = ({ history }) => {
             <li className='word'>INSURANCE</li>
             <li className='word'>SERVICE</li>
             <li className='word'>RESPONSIVE</li>
+            <li className='word'>DISCIPLINED</li> */}
+            <li className='word'>TAILORED</li>
+            <li className='word'>CLAIMS PAID</li>
+            <li className='word'>RISK MANAGEMENT</li>
+            <li className='word'>EXPERTISE</li>
             <li className='word'>DISCIPLINED</li>
+            <li className='word'>CONSISTENT</li>
+            <li className='word'>RESPONSIVE</li>
+            <li className='word'>INSURANCE</li>
+            <li className='word'>SERVICE</li>
+            <li className='word'>UNDERWRITING</li>
           </ul>
         </div>
       </div>
@@ -413,7 +423,33 @@ const Game = ({ history }) => {
 const handleGameLogic = (history, setActive, setDisplayTime) => {
   const nodelist = document.querySelectorAll('.letter');
   const letters = Array.apply(null, nodelist);
-  const plainWords = document.querySelectorAll('.word');
+  const unorderedWords = document.querySelectorAll('.word');
+  console.log(unorderedWords);
+  const plainWords = [
+    unorderedWords[1],
+    unorderedWords[5],
+    unorderedWords[0],
+    unorderedWords[3],
+    unorderedWords[2],
+    unorderedWords[9],
+    unorderedWords[7],
+    unorderedWords[8],
+    unorderedWords[6],
+    unorderedWords[4],
+  ];
+  console.log(plainWords);
+  // const plainWords = document.querySelectorAll('.word');
+
+  // claimsPaid,
+  // consistent,
+  // tailored,
+  // expertise,
+  // riskManagement,
+  // underwriting,
+  // insurance,
+  // service,
+  // responsive,
+  // disciplined,
 
   let time = 0;
   const tick = setInterval(() => time++, 1000);
