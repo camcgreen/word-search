@@ -30,6 +30,17 @@
   transition: opacity 0.2s ease-in-out;
 }
 
+.home {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+}
+
+.home img {
+  width: 36px;
+  
+}
+
 .congratulations {
   display: flex;
   flex-direction: column;

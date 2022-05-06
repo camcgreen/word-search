@@ -3,6 +3,7 @@ import Header from '../components/header';
 import Fullscreen from '../components/fullscreen';
 import { convertTime, onInactive } from '../utils/helpers';
 import { Link } from 'react-router-dom';
+import iconHome from '../img/home.svg';
 import '../styles/globals.css';
 import '../styles/game.css';
 
@@ -38,9 +39,6 @@ const Game = ({ history }) => {
   return (
     <div className='wrapper'>
       <div className='game no-select'>
-        {/* <Link to='/' style={{ position: 'fixed', bottom: 0, right: 0 }}>
-          Link to Home
-        </Link> */}
         <Header />
         <div className='container'>
           <ul className='soup'>
@@ -398,6 +396,9 @@ const Game = ({ history }) => {
           </ul>
         </div>
       </div>
+      <Link to='/' className='home'>
+        <img src={iconHome} className='home' alt='' />
+      </Link>
       <Fullscreen />
       <div className='overlay' style={{ opacity: active ? 0.75 : 0 }}></div>
       <Congratulations

@@ -66,3 +66,23 @@ h2 {
   /* background-color: #86182a;
   color: #86182a; */
 }
+
+.export {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  cursor: pointer;
+  /* background: grey; */
+  /* padding: 10px 20px; */
+  /* border-radius: 5px; */
+  /* color: white; */
+  transition: background-color 0.2s ease-in-out
+}
+
+.export:hover {
+/* background-color: rgb(98, 98, 98); */
+}
+
+.export img {
+  width: 36px;
+}
