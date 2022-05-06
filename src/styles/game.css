@@ -31,6 +31,10 @@
 }
 
 .congratulations {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   pointer-events: none;
   position: fixed;
   top: 50%;
@@ -41,6 +45,29 @@
   padding: 50px;
   color: white;
   transition: opacity 0.2s ease-in-out;
+}
+
+.congratulations p {
+  margin-top: 10px;
+}
+
+.congratulations button {
+  pointer-events: all;
+  cursor: pointer;
+  margin-top: 40px;
+  background: white;
+  /* color: var(--colRed); */
+  /* font-size: 1.25rem; */
+  /* border: solid var(--colRed) 1px; */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.2s ease-in-out;
+
+}
+
+.congratulations button:hover {
+  background-color: #c5c5c5;
 }
 
 .words {

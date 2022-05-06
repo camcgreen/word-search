@@ -10,7 +10,7 @@ function createWindow() {
     height: 800,
     minWidth: 950,
     minHeight: 700,
-    icon: '',
+    icon: './img/icon.png',
     autoHideMenuBar: true,
   });
 

@@ -6,3 +6,17 @@ export const convertTime = (seconds) => {
   }
   return min + ':' + sec;
 };
+
+export const onInactive = (ms, cb) => {
+  let wait = setTimeout(cb, ms);
+  document.onmousemove =
+    document.mousedown =
+    document.mouseup =
+    document.onkeydown =
+    document.onkeyup =
+    document.focus =
+      function () {
+        clearTimeout(wait);
+        wait = setTimeout(cb, ms);
+      };
+};

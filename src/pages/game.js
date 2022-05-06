@@ -1,16 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import Header from '../components/header';
 import Fullscreen from '../components/fullscreen';
-import { convertTime } from '../utils/helpers';
+import { convertTime, onInactive } from '../utils/helpers';
 import { Link } from 'react-router-dom';
 import '../styles/globals.css';
 import '../styles/game.css';
 
-const Congratulations = ({ active, displayTime }) => {
+const Congratulations = ({ history, active, displayTime }) => {
   return (
     <div className='congratulations' style={{ opacity: active ? 1 : 0 }}>
       <h1>Congratulations!</h1>
-      <p>{`Your time, ${convertTime(displayTime)}`}</p>
+      <p>{`Your time was ${convertTime(displayTime)}`}</p>
+      <button onClick={() => history.push('/leaderboard')}>Continue</button>
     </div>
   );
 };
@@ -21,6 +22,18 @@ const Game = ({ history }) => {
 
   useEffect(() => {
     handleGameLogic(history, setActive, setDisplayTime);
+    // let timer = setTimeout(() => history.push('/'), 5000);
+    // document.addEventListener('click', function () {
+    //   clearTimeout(timer);
+    //   timer = null;
+    //   if (timer === null) timer = setTimeout(() => history.push('/'), 5000);
+    // });
+    // return () => {
+    //   clearTimeout(timer);
+    //   timer = null;
+    //   console.log(timer);
+    //   console.log('unmounting');
+    // };
   }, []);
   return (
     <div className='wrapper'>
@@ -387,7 +400,11 @@ const Game = ({ history }) => {
       </div>
       <Fullscreen />
       <div className='overlay' style={{ opacity: active ? 0.75 : 0 }}></div>
-      <Congratulations active={active} displayTime={displayTime} />
+      <Congratulations
+        history={history}
+        active={active}
+        displayTime={displayTime}
+      />
     </div>
   );
 };
@@ -587,7 +604,7 @@ const handleGameLogic = (history, setActive, setDisplayTime) => {
     console.log('time = ' + time);
     setDisplayTime(time);
     setActive(true);
-    setTimeout(() => history.push('/leaderboard'), 4000);
+    // setTimeout(() => history.push('/leaderboard'), 4000);
     // resetGame();
   };
 
