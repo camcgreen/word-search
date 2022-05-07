@@ -1,3 +1,151 @@
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background-color: var(--colRed); */
+  background-color: #A42C38;
+}
+
 .landing {
-  
+  display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+  width: 100%;
+  /* max-width: 1150px; */
+  max-width: 1350px;
+  color: white;
+  /* padding-top: 100px; */
+}
+
+.logo {
+  align-self: flex-start;
+  width: 450px;
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  /* margin-top: 40px; */
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  height: 450px;
+}
+
+.column-text {
+  margin-right: 100px;
+  justify-content: space-between;
+}
+
+.column-time {
+  height: calc(450px - 40px);
+  border: solid white 1px;
+  border-radius: 20px;
+  padding: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.column-time h1 {
+  font-size: 3rem;
+  max-width: 200px;
+  text-align: center;
+}
+
+.column-time h1:first-of-type {
+  margin-top: 40px;
+}
+
+.column p {
+  font-size: 2rem;
+  color: #DAA9AD;
+}
+
+.column-text button {
+  cursor: pointer;
+  justify-self: flex-end;
+  background-color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 20px 40px;
+  display: inline-block;
+  font-size: 4rem;
+  color: #B31B34;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.column-text button:hover {
+  background-color: rgb(215, 215, 215);
+}
+
+.column p:first-of-type {
+  margin-top: 25%;
+}
+
+.ipad {
+  height: 100%;
+}
+
+.clock {
+  width: 150px;
+  /* height: 200px; */
+  /* width: calc(100% - 40px) */
+}
+
+@media (max-width: 1450px) {
+  .landing {
+    max-width: calc(1030px - 40px);
+  }
+
+  .main {
+    margin-top: 40px;
+  }
+
+  .column {
+    height: 300px;
+  }
+
+  .column-time {
+    height: calc(300px - 40px);
+  }
+
+  .column-text p {
+    font-size: 1.5rem;
+  }
+
+  .column-text button {
+    font-size: 1.5rem;
+  }
+
+  .column-time h1 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 1050px) {
+  .landing {
+    max-width: calc(930px - 40px);
+  }
+
+  .column-text {
+    margin-right: 50px;
+  }
+
+  .column-text p {
+    font-size: 1.25rem;
+  }
+
+  .column-text button {
+    font-size: 1.25rem;
+  }
+
+  /* .column-time {
+    display: none;
+  } */
 }

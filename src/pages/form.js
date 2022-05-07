@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Header from '../components/header';
 import Fullscreen from '../components/fullscreen';
 import { Link } from 'react-router-dom';
+import iconHome from '../img/home.svg';
 import '../styles/globals.css';
 import '../styles/form.css';
 
@@ -62,6 +63,9 @@ const Form = ({ history }) => {
           </button>
         </form>
       </div>
+      <Link to='/' className='home'>
+        <img src={iconHome} className='home' alt='' />
+      </Link>
       <Fullscreen />
     </div>
   );

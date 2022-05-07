@@ -8,8 +8,8 @@ function createWindow() {
   mainWindow = new BrowserWindow({
     width: 1200,
     height: 800,
-    minWidth: 950,
-    minHeight: 700,
+    minWidth: 1200,
+    minHeight: 750,
     icon: './img/icon.png',
     autoHideMenuBar: true,
   });

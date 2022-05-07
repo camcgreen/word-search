@@ -7,6 +7,17 @@
   max-width: 1150px;
 }
 
+.home {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+}
+
+.home img {
+  width: 36px;
+  
+}
+
 form {
   margin-top: 20px;
   width: 100%;
