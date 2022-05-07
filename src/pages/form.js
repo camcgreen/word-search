@@ -8,11 +8,25 @@ import '../styles/form.css';
 const Form = ({ history }) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
+  const checkEmail = (thisEmail) => {
+    return thisEmail === email;
+  };
   const handleSubmit = (e) => {
+    e.preventDefault();
     localStorage.setItem('currentName', name);
     localStorage.setItem('currentEmail', email);
-    history.push('/game');
-    e.preventDefault();
+    const emails = JSON.parse(localStorage.getItem('emails'));
+    if (emails) {
+      if (emails.some(checkEmail)) {
+        alert('Email address already entered');
+        setName('');
+        setEmail('');
+      } else {
+        history.push('/game');
+      }
+    } else {
+      history.push('/game');
+    }
   };
   const handleNameChange = (e) => {
     setName(e.target.value);
