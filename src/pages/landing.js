@@ -2,37 +2,28 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Fullscreen from '../components/fullscreen';
 import logo from '../img/logo.svg';
-import ipad from '../img/ipad.png';
-import clock from '../img/clock.png';
+import win from '../img/win.svg';
+import play from '../img/play.svg';
+import fast from '../img/fast.svg';
 import '../styles/globals.css';
 import '../styles/landing.css';
 
 const Landing = ({ history }) => {
   return (
-    <div className='wrapper' style={{ backgroundColor: '#B31B34' }}>
+    <div className='wrapper' style={{ backgroundColor: '#bf0b24' }}>
       <div className='landing'>
         <img className='logo' src={logo} alt='' />
         <main className='main'>
-          <div className='column column-text'>
-            <div>
-              <p>Find the pairs in the quickest time</p>
-              <p> using as few moves as possible to </p>
-              <p>knock the leader off the top spot.</p>
-            </div>
-            <button onClick={() => history.push('/form')}>PLAY</button>
+          <div className='left'>
+            <img className='win' src={win} alt='' />
+            <img
+              className='play'
+              src={play}
+              alt=''
+              onClick={() => history.push('/form')}
+            />
           </div>
-          <div className='column'>
-            <img className='ipad' src={ipad} alt='' />
-          </div>
-          <div className='column column-time'>
-            <img className='clock' src={clock} alt='' />
-            {/* <h1>FASTEST TIME WINS</h1> */}
-            <div>
-              <h1>FASTEST</h1>
-              <h1>TIME</h1>
-              <h1>WINS</h1>
-            </div>
-          </div>
+          <img className='fast' src={fast} alt='' />
         </main>
       </div>
       <Fullscreen />
